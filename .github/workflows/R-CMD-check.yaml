@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install jupyter
-        run: python3 -m pip install jupyter
+        run: python3 -m pip install --break-system-packages jupyter
 
       - uses: r-lib/actions/setup-pandoc@v2
 
