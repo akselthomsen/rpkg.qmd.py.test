@@ -1,0 +1,16 @@
+---
+title: "Test"
+format: 
+  html: 
+    self-contained: true
+---
+
+```{python}
+import sys
+print(sys.executable)
+```
+
+```{python}
+1+1
+```
+
