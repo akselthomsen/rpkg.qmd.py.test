@@ -37,11 +37,11 @@ jobs:
         run: python3 -m pip install jupyter
 
       - name: (macOS) Install jupyter
-        if: runner.os == 'Windows'
+        if: runner.os == 'macOS'
         run: python3 -m pip install --break-system-packages jupyter
 
       - name: (Windows) Install jupyter
-        if: runner.os == 'macOS'
+        if: runner.os == 'Windows'
         run: py -m pip install jupyter
 
       - uses: r-lib/actions/setup-pandoc@v2
