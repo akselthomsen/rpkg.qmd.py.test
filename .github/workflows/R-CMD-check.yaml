@@ -32,8 +32,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install jupyter
+      - name: (Linux) Install jupyter
+        if: runner.os == 'Linux'
+        run: python3 -m pip install jupyter
+
+      - name: (macOS) Install jupyter
+        if: runner.os == 'Windows'
         run: python3 -m pip install --break-system-packages jupyter
+
+      - name: (Windows) Install jupyter
+        if: runner.os == 'macOS'
+        run: py -m pip install jupyter
 
       - uses: r-lib/actions/setup-pandoc@v2
 
